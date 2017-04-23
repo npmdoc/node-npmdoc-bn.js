@@ -1,0 +1,5979 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/indutny/bn.js">bn.js (v4.11.6)</a>
+</h1>
+<h4>Big number implementation in pure javascript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bn.js">module bn.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.js">
+            function <span class="apidocSignatureSpan">bn.</span>js
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN">
+            function <span class="apidocSignatureSpan">bn.js.</span>BN
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js._prime">
+            function <span class="apidocSignatureSpan">bn.js.</span>_prime
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.isBN">
+            function <span class="apidocSignatureSpan">bn.js.</span>isBN
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.js.BN">
+            function <span class="apidocSignatureSpan">bn.js.</span>js.BN
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.max">
+            function <span class="apidocSignatureSpan">bn.js.</span>max
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.min">
+            function <span class="apidocSignatureSpan">bn.js.</span>min
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.mont">
+            function <span class="apidocSignatureSpan">bn.js.</span>mont
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.red">
+            function <span class="apidocSignatureSpan">bn.js.</span>red
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">bn.js.</span>wordSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bn.js.</span>js.BN.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bn.js.BN">module bn.js.BN</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.BN">
+            function <span class="apidocSignatureSpan">bn.js.</span>BN
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN._prime">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>_prime
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.isBN">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>isBN
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.max">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>max
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.min">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>min
+            <span class="apidocSignatureSpan">(left, right)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.mont">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>mont
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.red">
+            function <span class="apidocSignatureSpan">bn.js.BN.</span>red
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">bn.js.BN.</span>wordSize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bn.js.BN.prototype">module bn.js.BN.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._countBits">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_countBits
+            <span class="apidocSignatureSpan">(w)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._expand">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_expand
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._forceRed">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_forceRed
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._iaddn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_iaddn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._init">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_init
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._initArray">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_initArray
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._initNumber">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_initNumber
+            <span class="apidocSignatureSpan">(number, base, endian)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._invmp">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_invmp
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._ishlnsubmul">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_ishlnsubmul
+            <span class="apidocSignatureSpan">(num, mul, shift)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._normSign">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_normSign
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._parseBase">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_parseBase
+            <span class="apidocSignatureSpan">(number, base, start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._parseHex">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_parseHex
+            <span class="apidocSignatureSpan">(number, start)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._wordDiv">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_wordDiv
+            <span class="apidocSignatureSpan">(num, mode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype._zeroBits">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_zeroBits
+            <span class="apidocSignatureSpan">(w)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.abs">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>abs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.add">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>add
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.addn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>addn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.and">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>and
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.andln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>andln
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.bincn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>bincn
+            <span class="apidocSignatureSpan">(bit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.bitLength">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>bitLength
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.byteLength">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>byteLength
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.clone">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.cmp">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>cmp
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.cmpn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>cmpn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.copy">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>copy
+            <span class="apidocSignatureSpan">(dest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.div">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>div
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.divRound">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divRound
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.divmod">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divmod
+            <span class="apidocSignatureSpan">(num, mode, positive)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.divn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.egcd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>egcd
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.eq">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>eq
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.eqn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>eqn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.forceRed">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>forceRed
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.fromRed">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>fromRed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.fromTwos">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>fromTwos
+            <span class="apidocSignatureSpan">(width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.gcd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gcd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.gt">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.gte">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gte
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.gten">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gten
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.gtn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gtn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iabs">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iabs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iadd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iadd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iaddn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iaddn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iand">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iand
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.idivn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>idivn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.imaskn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imaskn
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.imul">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.imuln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imuln
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ineg">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ineg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.inotn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>inotn
+            <span class="apidocSignatureSpan">(width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.inspect">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>inspect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.invm">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>invm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ior">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ior
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isEven">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isEven
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isNeg">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isNeg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isOdd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isOdd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isZero">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isZero
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ishln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ishln
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ishrn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ishrn
+            <span class="apidocSignatureSpan">(bits, hint, extended)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isqr">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isqr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isub">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.isubn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isubn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iuand">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuand
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iuor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iushln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iushln
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iushrn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iushrn
+            <span class="apidocSignatureSpan">(bits, hint, extended)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.iuxor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuxor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ixor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ixor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.lt">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.lte">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lte
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.lten">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lten
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ltn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ltn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.maskn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>maskn
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.mod">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mod
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.modn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>modn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.mul">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.mulTo">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mulTo
+            <span class="apidocSignatureSpan">(num, out)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.mulf">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mulf
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.muln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>muln
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.neg">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>neg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.notn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>notn
+            <span class="apidocSignatureSpan">(width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.or">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>or
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.pow">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>pow
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redAdd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redAdd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redIAdd">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redIAdd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redIMul">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redIMul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redISqr">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redISqr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redISub">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redISub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redInvm">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redInvm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redMul">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redMul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redNeg">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redNeg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redPow">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redPow
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redShl">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redShl
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redSqr">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSqr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redSqrt">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSqrt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.redSub">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.setn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>setn
+            <span class="apidocSignatureSpan">(bit, val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.shln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>shln
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.shrn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>shrn
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.sqr">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>sqr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.strip">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>strip
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.sub">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>sub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.subn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>subn
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.testn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>testn
+            <span class="apidocSignatureSpan">(bit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toArray">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toArray
+            <span class="apidocSignatureSpan">(endian, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toArrayLike">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toArrayLike
+            <span class="apidocSignatureSpan">(ArrayType, endian, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toBuffer">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toBuffer
+            <span class="apidocSignatureSpan">(endian, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toJSON">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toNumber">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toNumber
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toRed">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toRed
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toString">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toString
+            <span class="apidocSignatureSpan">(base, padding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.toTwos">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toTwos
+            <span class="apidocSignatureSpan">(width)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.uand">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uand
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ucmp">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ucmp
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.umod">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>umod
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.uor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ushln">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ushln
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.ushrn">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ushrn
+            <span class="apidocSignatureSpan">(bits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.uxor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uxor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.xor">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>xor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bn.js.BN.prototype.zeroBits">
+            function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>zeroBits
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bn.js" id="apidoc.module.bn.js">module bn.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.js" id="apidoc.element.bn.js.js">
+        function <span class="apidocSignatureSpan">bn.</span>js
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BN(number, base, endian) {
+  if (BN.isBN(number)) {
+    return number;
+  }
+
+  this.negative = 0;
+  this.words = null;
+  this.length = 0;
+
+  // Reduction context
+  this.red = null;
+
+  if (number !== null) {
+    if (base === 'le' || base === 'be') {
+      endian = base;
+      base = 10;
+    }
+
+    this._init(number || 0, base || 10, endian || 'be');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN" id="apidoc.element.bn.js.BN">
+        function <span class="apidocSignatureSpan">bn.js.</span>BN
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BN(number, base, endian) {
+  if (BN.isBN(number)) {
+    return number;
+  }
+
+  this.negative = 0;
+  this.words = null;
+  this.length = 0;
+
+  // Reduction context
+  this.red = null;
+
+  if (number !== null) {
+    if (base === 'le' || base === 'be') {
+      endian = base;
+      base = 10;
+    }
+
+    this._init(number || 0, base || 10, endian || 'be');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js._prime" id="apidoc.element.bn.js._prime">
+        function <span class="apidocSignatureSpan">bn.js.</span>_prime
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prime(name) {
+  // Cached version of prime
+  if (primes[name]) return primes[name];
+
+  var prime;
+  if (name === 'k256') {
+    prime = new K256();
+  } else if (name === 'p224') {
+    prime = new P224();
+  } else if (name === 'p192') {
+    prime = new P192();
+  } else if (name === 'p25519') {
+    prime = new P25519();
+  } else {
+    throw new Error('Unknown prime ' + name);
+  }
+  primes[name] = prime;
+
+  return prime;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.isBN" id="apidoc.element.bn.js.isBN">
+        function <span class="apidocSignatureSpan">bn.js.</span>isBN
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBN(num) {
+  if (num instanceof BN) {
+    return true;
+  }
+
+  return num !== null &amp;&amp; typeof num === 'object' &amp;&amp;
+    num.constructor.wordSize === BN.wordSize &amp;&amp; Array.isArray(num.words);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.<span class="apidocCodeKeywordSpan">isBN</span>(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.js.BN" id="apidoc.element.bn.js.js.BN">
+        function <span class="apidocSignatureSpan">bn.js.</span>js.BN
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BN(number, base, endian) {
+  if (BN.isBN(number)) {
+    return number;
+  }
+
+  this.negative = 0;
+  this.words = null;
+  this.length = 0;
+
+  // Reduction context
+  this.red = null;
+
+  if (number !== null) {
+    if (base === 'le' || base === 'be') {
+      endian = base;
+      base = 10;
+    }
+
+    this._init(number || 0, base || 10, endian || 'be');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.max" id="apidoc.element.bn.js.max">
+        function <span class="apidocSignatureSpan">bn.js.</span>max
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function max(left, right) {
+  if (left.cmp(right) &gt; 0) return left;
+  return right;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+src.push('var bh' + i + ' = b' + i + ' &gt;&gt;&gt; 13;');
+  }
+  src.push('');
+  src.push('out.negative = self.negative ^ num.negative;');
+  src.push('out.length = ' + len + ';');
+
+  for (var k = 0; k &lt; len; k++) {
+var minJ = Math.<span class="apidocCodeKeywordSpan">max</span>(0, k - alen + 1);
+var maxJ = Math.min(k, blen - 1);
+
+src.push('\/* k = ' + k + ' *\/');
+src.push('lo = Math.imul(al' + (k - minJ) + ', bl' + minJ + ');');
+src.push('mid = Math.imul(al' + (k - minJ) + ', bh' + minJ + ');');
+src.push(
+    'mid = (mid + Math.imul(ah' + (k - minJ) + ', bl' + minJ + ')) | 0;');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.min" id="apidoc.element.bn.js.min">
+        function <span class="apidocSignatureSpan">bn.js.</span>min
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function min(left, right) {
+  if (left.cmp(right) &lt; 0) return left;
+  return right;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  src.push('');
+  src.push('out.negative = self.negative ^ num.negative;');
+  src.push('out.length = ' + len + ';');
+
+  for (var k = 0; k &lt; len; k++) {
+var minJ = Math.max(0, k - alen + 1);
+var maxJ = Math.<span class="apidocCodeKeywordSpan">min</span>(k, blen - 1);
+
+src.push('\/* k = ' + k + ' *\/');
+src.push('lo = Math.imul(al' + (k - minJ) + ', bl' + minJ + ');');
+src.push('mid = Math.imul(al' + (k - minJ) + ', bh' + minJ + ');');
+src.push(
+    'mid = (mid + Math.imul(ah' + (k - minJ) + ', bl' + minJ + ')) | 0;');
+src.push('hi = Math.imul(ah' + (k - minJ) + ', bh' + minJ + ');');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.mont" id="apidoc.element.bn.js.mont">
+        function <span class="apidocSignatureSpan">bn.js.</span>mont
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mont(num) {
+  return new Mont(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `'p224'`
+* `'p192'`
+* `'p25519'`
+
+Or:
+
+```js
+var red = BN.<span class="apidocCodeKeywordSpan">mont</span>(num);
+```
+
+To reduce numbers with [Montgomery trick][1]. `.mont()` is generally faster than
+`.red(num)`, but slower than `BN.red(primeName)`.
+
+### Converting numbers
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.red" id="apidoc.element.bn.js.red">
+        function <span class="apidocSignatureSpan">bn.js.</span>red
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function red(num) {
+  return new Red(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+for [Mersenne Prime][1].
+
+### Reduction context
+
+To enable this tricks one should create a reduction context:
+
+```js
+var red = BN.<span class="apidocCodeKeywordSpan">red</span>(num);
+```
+where `num` is just a BN instance.
+
+Or:
+
+```js
+var red = BN.red(primeName);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bn.js.BN" id="apidoc.module.bn.js.BN">module bn.js.BN</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.BN" id="apidoc.element.bn.js.BN.BN">
+        function <span class="apidocSignatureSpan">bn.js.</span>BN
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BN(number, base, endian) {
+  if (BN.isBN(number)) {
+    return number;
+  }
+
+  this.negative = 0;
+  this.words = null;
+  this.length = 0;
+
+  // Reduction context
+  this.red = null;
+
+  if (number !== null) {
+    if (base === 'le' || base === 'be') {
+      endian = base;
+      base = 10;
+    }
+
+    this._init(number || 0, base || 10, endian || 'be');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN._prime" id="apidoc.element.bn.js.BN._prime">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>_prime
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prime(name) {
+  // Cached version of prime
+  if (primes[name]) return primes[name];
+
+  var prime;
+  if (name === 'k256') {
+    prime = new K256();
+  } else if (name === 'p224') {
+    prime = new P224();
+  } else if (name === 'p192') {
+    prime = new P192();
+  } else if (name === 'p25519') {
+    prime = new P25519();
+  } else {
+    throw new Error('Unknown prime ' + name);
+  }
+  primes[name] = prime;
+
+  return prime;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.isBN" id="apidoc.element.bn.js.BN.isBN">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>isBN
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBN(num) {
+  if (num instanceof BN) {
+    return true;
+  }
+
+  return num !== null &amp;&amp; typeof num === 'object' &amp;&amp;
+    num.constructor.wordSize === BN.wordSize &amp;&amp; Array.isArray(num.words);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.<span class="apidocCodeKeywordSpan">isBN</span>(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.max" id="apidoc.element.bn.js.BN.max">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>max
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function max(left, right) {
+  if (left.cmp(right) &gt; 0) return left;
+  return right;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+src.push('var bh' + i + ' = b' + i + ' &gt;&gt;&gt; 13;');
+  }
+  src.push('');
+  src.push('out.negative = self.negative ^ num.negative;');
+  src.push('out.length = ' + len + ';');
+
+  for (var k = 0; k &lt; len; k++) {
+var minJ = Math.<span class="apidocCodeKeywordSpan">max</span>(0, k - alen + 1);
+var maxJ = Math.min(k, blen - 1);
+
+src.push('\/* k = ' + k + ' *\/');
+src.push('lo = Math.imul(al' + (k - minJ) + ', bl' + minJ + ');');
+src.push('mid = Math.imul(al' + (k - minJ) + ', bh' + minJ + ');');
+src.push(
+    'mid = (mid + Math.imul(ah' + (k - minJ) + ', bl' + minJ + ')) | 0;');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.min" id="apidoc.element.bn.js.BN.min">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>min
+        <span class="apidocSignatureSpan">(left, right)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function min(left, right) {
+  if (left.cmp(right) &lt; 0) return left;
+  return right;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  src.push('');
+  src.push('out.negative = self.negative ^ num.negative;');
+  src.push('out.length = ' + len + ';');
+
+  for (var k = 0; k &lt; len; k++) {
+var minJ = Math.max(0, k - alen + 1);
+var maxJ = Math.<span class="apidocCodeKeywordSpan">min</span>(k, blen - 1);
+
+src.push('\/* k = ' + k + ' *\/');
+src.push('lo = Math.imul(al' + (k - minJ) + ', bl' + minJ + ');');
+src.push('mid = Math.imul(al' + (k - minJ) + ', bh' + minJ + ');');
+src.push(
+    'mid = (mid + Math.imul(ah' + (k - minJ) + ', bl' + minJ + ')) | 0;');
+src.push('hi = Math.imul(ah' + (k - minJ) + ', bh' + minJ + ');');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.mont" id="apidoc.element.bn.js.BN.mont">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>mont
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mont(num) {
+  return new Mont(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `'p224'`
+* `'p192'`
+* `'p25519'`
+
+Or:
+
+```js
+var red = BN.<span class="apidocCodeKeywordSpan">mont</span>(num);
+```
+
+To reduce numbers with [Montgomery trick][1]. `.mont()` is generally faster than
+`.red(num)`, but slower than `BN.red(primeName)`.
+
+### Converting numbers
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.red" id="apidoc.element.bn.js.BN.red">
+        function <span class="apidocSignatureSpan">bn.js.BN.</span>red
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function red(num) {
+  return new Red(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+for [Mersenne Prime][1].
+
+### Reduction context
+
+To enable this tricks one should create a reduction context:
+
+```js
+var red = BN.<span class="apidocCodeKeywordSpan">red</span>(num);
+```
+where `num` is just a BN instance.
+
+Or:
+
+```js
+var red = BN.red(primeName);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bn.js.BN.prototype" id="apidoc.module.bn.js.BN.prototype">module bn.js.BN.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._countBits" id="apidoc.element.bn.js.BN.prototype._countBits">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_countBits
+        <span class="apidocSignatureSpan">(w)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _countBits(w) {
+  return 32 - Math.clz32(w);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._expand" id="apidoc.element.bn.js.BN.prototype._expand">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_expand
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _expand(size) {
+  while (this.length &lt; size) {
+    this.words[this.length++] = 0;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._forceRed" id="apidoc.element.bn.js.BN.prototype._forceRed">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_forceRed
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _forceRed(ctx) {
+  this.red = ctx;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._iaddn" id="apidoc.element.bn.js.BN.prototype._iaddn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_iaddn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _iaddn(num) {
+  this.words[0] += num;
+
+  // Carry
+  for (var i = 0; i &lt; this.length &amp;&amp; this.words[i] &gt;= 0x4000000; i++) {
+    this.words[i] -= 0x4000000;
+    if (i === this.length - 1) {
+      this.words[i + 1] = 1;
+    } else {
+      this.words[i + 1]++;
+    }
+  }
+  this.length = Math.max(this.length, i + 1);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._init" id="apidoc.element.bn.js.BN.prototype._init">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_init
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(number, base, endian) {
+  if (typeof number === 'number') {
+    return this._initNumber(number, base, endian);
+  }
+
+  if (typeof number === 'object') {
+    return this._initArray(number, base, endian);
+  }
+
+  if (base === 'hex') {
+    base = 16;
+  }
+  assert(base === (base | 0) &amp;&amp; base &gt;= 2 &amp;&amp; base &lt;= 36);
+
+  number = number.toString().replace(/\s+/g, '');
+  var start = 0;
+  if (number[0] === '-') {
+    start++;
+  }
+
+  if (base === 16) {
+    this._parseHex(number, start);
+  } else {
+    this._parseBase(number, base, start);
+  }
+
+  if (number[0] === '-') {
+    this.negative = 1;
+  }
+
+  this.strip();
+
+  if (endian !== 'le') return;
+
+  this._initArray(this.toArray(), base, endian);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._initArray" id="apidoc.element.bn.js.BN.prototype._initArray">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_initArray
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _initArray(number, base, endian) {
+  // Perhaps a Uint8Array
+  assert(typeof number.length === 'number');
+  if (number.length &lt;= 0) {
+    this.words = [ 0 ];
+    this.length = 1;
+    return this;
+  }
+
+  this.length = Math.ceil(number.length / 3);
+  this.words = new Array(this.length);
+  for (var i = 0; i &lt; this.length; i++) {
+    this.words[i] = 0;
+  }
+
+  var j, w;
+  var off = 0;
+  if (endian === 'be') {
+    for (i = number.length - 1, j = 0; i &gt;= 0; i -= 3) {
+      w = number[i] | (number[i - 1] &lt;&lt; 8) | (number[i - 2] &lt;&lt; 16);
+      this.words[j] |= (w &lt;&lt; off) &amp; 0x3ffffff;
+      this.words[j + 1] = (w &gt;&gt;&gt; (26 - off)) &amp; 0x3ffffff;
+      off += 24;
+      if (off &gt;= 26) {
+        off -= 26;
+        j++;
+      }
+    }
+  } else if (endian === 'le') {
+    for (i = 0, j = 0; i &lt; number.length; i += 3) {
+      w = number[i] | (number[i + 1] &lt;&lt; 8) | (number[i + 2] &lt;&lt; 16);
+      this.words[j] |= (w &lt;&lt; off) &amp; 0x3ffffff;
+      this.words[j + 1] = (w &gt;&gt;&gt; (26 - off)) &amp; 0x3ffffff;
+      off += 24;
+      if (off &gt;= 26) {
+        off -= 26;
+        j++;
+      }
+    }
+  }
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._initNumber" id="apidoc.element.bn.js.BN.prototype._initNumber">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_initNumber
+        <span class="apidocSignatureSpan">(number, base, endian)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _initNumber(number, base, endian) {
+  if (number &lt; 0) {
+    this.negative = 1;
+    number = -number;
+  }
+  if (number &lt; 0x4000000) {
+    this.words = [ number &amp; 0x3ffffff ];
+    this.length = 1;
+  } else if (number &lt; 0x10000000000000) {
+    this.words = [
+      number &amp; 0x3ffffff,
+      (number / 0x4000000) &amp; 0x3ffffff
+    ];
+    this.length = 2;
+  } else {
+    assert(number &lt; 0x20000000000000); // 2 ^ 53 (unsafe)
+    this.words = [
+      number &amp; 0x3ffffff,
+      (number / 0x4000000) &amp; 0x3ffffff,
+      1
+    ];
+    this.length = 3;
+  }
+
+  if (endian !== 'le') return;
+
+  // Reverse the bytes
+  this._initArray(this.toArray(), base, endian);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._invmp" id="apidoc.element.bn.js.BN.prototype._invmp">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_invmp
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _invmp(p) {
+  assert(p.negative === 0);
+  assert(!p.isZero());
+
+  var a = this;
+  var b = p.clone();
+
+  if (a.negative !== 0) {
+    a = a.umod(p);
+  } else {
+    a = a.clone();
+  }
+
+  var x1 = new BN(1);
+  var x2 = new BN(0);
+
+  var delta = b.clone();
+
+  while (a.cmpn(1) &gt; 0 &amp;&amp; b.cmpn(1) &gt; 0) {
+    for (var i = 0, im = 1; (a.words[0] &amp; im) === 0 &amp;&amp; i &lt; 26; ++i, im &lt;&lt;= 1);
+    if (i &gt; 0) {
+      a.iushrn(i);
+      while (i-- &gt; 0) {
+        if (x1.isOdd()) {
+          x1.iadd(delta);
+        }
+
+        x1.iushrn(1);
+      }
+    }
+
+    for (var j = 0, jm = 1; (b.words[0] &amp; jm) === 0 &amp;&amp; j &lt; 26; ++j, jm &lt;&lt;= 1);
+    if (j &gt; 0) {
+      b.iushrn(j);
+      while (j-- &gt; 0) {
+        if (x2.isOdd()) {
+          x2.iadd(delta);
+        }
+
+        x2.iushrn(1);
+      }
+    }
+
+    if (a.cmp(b) &gt;= 0) {
+      a.isub(b);
+      x1.isub(x2);
+    } else {
+      b.isub(a);
+      x2.isub(x1);
+    }
+  }
+
+  var res;
+  if (a.cmpn(1) === 0) {
+    res = x1;
+  } else {
+    res = x2;
+  }
+
+  if (res.cmpn(0) &lt; 0) {
+    res.iadd(p);
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._ishlnsubmul" id="apidoc.element.bn.js.BN.prototype._ishlnsubmul">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_ishlnsubmul
+        <span class="apidocSignatureSpan">(num, mul, shift)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _ishlnsubmul(num, mul, shift) {
+  var len = num.length + shift;
+  var i;
+
+  this._expand(len);
+
+  var w;
+  var carry = 0;
+  for (i = 0; i &lt; num.length; i++) {
+    w = (this.words[i + shift] | 0) + carry;
+    var right = (num.words[i] | 0) * mul;
+    w -= right &amp; 0x3ffffff;
+    carry = (w &gt;&gt; 26) - ((right / 0x4000000) | 0);
+    this.words[i + shift] = w &amp; 0x3ffffff;
+  }
+  for (; i &lt; this.length - shift; i++) {
+    w = (this.words[i + shift] | 0) + carry;
+    carry = w &gt;&gt; 26;
+    this.words[i + shift] = w &amp; 0x3ffffff;
+  }
+
+  if (carry === 0) return this.strip();
+
+  // Subtraction overflow
+  assert(carry === -1);
+  carry = 0;
+  for (i = 0; i &lt; this.length; i++) {
+    w = -(this.words[i] | 0) + carry;
+    carry = w &gt;&gt; 26;
+    this.words[i] = w &amp; 0x3ffffff;
+  }
+  this.negative = 1;
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._normSign" id="apidoc.element.bn.js.BN.prototype._normSign">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_normSign
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _normSign() {
+  // -0 = 0
+  if (this.length === 1 &amp;&amp; this.words[0] === 0) {
+    this.negative = 0;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._parseBase" id="apidoc.element.bn.js.BN.prototype._parseBase">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_parseBase
+        <span class="apidocSignatureSpan">(number, base, start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _parseBase(number, base, start) {
+  // Initialize as zero
+  this.words = [ 0 ];
+  this.length = 1;
+
+  // Find length of limb in base
+  for (var limbLen = 0, limbPow = 1; limbPow &lt;= 0x3ffffff; limbPow *= base) {
+    limbLen++;
+  }
+  limbLen--;
+  limbPow = (limbPow / base) | 0;
+
+  var total = number.length - start;
+  var mod = total % limbLen;
+  var end = Math.min(total, total - mod) + start;
+
+  var word = 0;
+  for (var i = start; i &lt; end; i += limbLen) {
+    word = parseBase(number, i, i + limbLen, base);
+
+    this.imuln(limbPow);
+    if (this.words[0] + word &lt; 0x4000000) {
+      this.words[0] += word;
+    } else {
+      this._iaddn(word);
+    }
+  }
+
+  if (mod !== 0) {
+    var pow = 1;
+    word = parseBase(number, i, number.length, base);
+
+    for (i = 0; i &lt; mod; i++) {
+      pow *= base;
+    }
+
+    this.imuln(pow);
+    if (this.words[0] + word &lt; 0x4000000) {
+      this.words[0] += word;
+    } else {
+      this._iaddn(word);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._parseHex" id="apidoc.element.bn.js.BN.prototype._parseHex">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_parseHex
+        <span class="apidocSignatureSpan">(number, start)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _parseHex(number, start) {
+  // Create possibly bigger array to ensure that it fits the number
+  this.length = Math.ceil((number.length - start) / 6);
+  this.words = new Array(this.length);
+  for (var i = 0; i &lt; this.length; i++) {
+    this.words[i] = 0;
+  }
+
+  var j, w;
+  // Scan 24-bit chunks and add them to the number
+  var off = 0;
+  for (i = number.length - 6, j = 0; i &gt;= start; i -= 6) {
+    w = parseHex(number, i, i + 6);
+    this.words[j] |= (w &lt;&lt; off) &amp; 0x3ffffff;
+    // NOTE: `0x3fffff` is intentional here, 26bits max shift + 24bit hex limb
+    this.words[j + 1] |= w &gt;&gt;&gt; (26 - off) &amp; 0x3fffff;
+    off += 24;
+    if (off &gt;= 26) {
+      off -= 26;
+      j++;
+    }
+  }
+  if (i + 6 !== start) {
+    w = parseHex(number, start, i + 6);
+    this.words[j] |= (w &lt;&lt; off) &amp; 0x3ffffff;
+    this.words[j + 1] |= w &gt;&gt;&gt; (26 - off) &amp; 0x3fffff;
+  }
+  this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._wordDiv" id="apidoc.element.bn.js.BN.prototype._wordDiv">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_wordDiv
+        <span class="apidocSignatureSpan">(num, mode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _wordDiv(num, mode) {
+  var shift = this.length - num.length;
+
+  var a = this.clone();
+  var b = num;
+
+  // Normalize
+  var bhi = b.words[b.length - 1] | 0;
+  var bhiBits = this._countBits(bhi);
+  shift = 26 - bhiBits;
+  if (shift !== 0) {
+    b = b.ushln(shift);
+    a.iushln(shift);
+    bhi = b.words[b.length - 1] | 0;
+  }
+
+  // Initialize quotient
+  var m = a.length - b.length;
+  var q;
+
+  if (mode !== 'mod') {
+    q = new BN(null);
+    q.length = m + 1;
+    q.words = new Array(q.length);
+    for (var i = 0; i &lt; q.length; i++) {
+      q.words[i] = 0;
+    }
+  }
+
+  var diff = a.clone()._ishlnsubmul(b, 1, m);
+  if (diff.negative === 0) {
+    a = diff;
+    if (q) {
+      q.words[m] = 1;
+    }
+  }
+
+  for (var j = m - 1; j &gt;= 0; j--) {
+    var qj = (a.words[b.length + j] | 0) * 0x4000000 +
+      (a.words[b.length + j - 1] | 0);
+
+    // NOTE: (qj / bhi) is (0x3ffffff * 0x4000000 + 0x3ffffff) / 0x2000000 max
+    // (0x7ffffff)
+    qj = Math.min((qj / bhi) | 0, 0x3ffffff);
+
+    a._ishlnsubmul(b, qj, j);
+    while (a.negative !== 0) {
+      qj--;
+      a.negative = 0;
+      a._ishlnsubmul(b, 1, j);
+      if (!a.isZero()) {
+        a.negative ^= 1;
+      }
+    }
+    if (q) {
+      q.words[j] = qj;
+    }
+  }
+  if (q) {
+    q.strip();
+  }
+  a.strip();
+
+  // Denormalize
+  if (mode !== 'div' &amp;&amp; shift !== 0) {
+    a.iushrn(shift);
+  }
+
+  return {
+    div: q || null,
+    mod: a
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype._zeroBits" id="apidoc.element.bn.js.BN.prototype._zeroBits">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>_zeroBits
+        <span class="apidocSignatureSpan">(w)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _zeroBits(w) {
+  // Short-cut
+  if (w === 0) return 26;
+
+  var t = w;
+  var r = 0;
+  if ((t &amp; 0x1fff) === 0) {
+    r += 13;
+    t &gt;&gt;&gt;= 13;
+  }
+  if ((t &amp; 0x7f) === 0) {
+    r += 7;
+    t &gt;&gt;&gt;= 7;
+  }
+  if ((t &amp; 0xf) === 0) {
+    r += 4;
+    t &gt;&gt;&gt;= 4;
+  }
+  if ((t &amp; 0x3) === 0) {
+    r += 2;
+    t &gt;&gt;&gt;= 2;
+  }
+  if ((t &amp; 0x1) === 0) {
+    r++;
+  }
+  return r;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.abs" id="apidoc.element.bn.js.BN.prototype.abs">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>abs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function abs() {
+  return this.clone().iabs();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.<span class="apidocCodeKeywordSpan">abs</span>()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.add" id="apidoc.element.bn.js.BN.prototype.add">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>add
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function add(num) {
+  var res;
+  if (num.negative !== 0 &amp;&amp; this.negative === 0) {
+    num.negative = 0;
+    res = this.sub(num);
+    num.negative ^= 1;
+    return res;
+  } else if (num.negative === 0 &amp;&amp; this.negative !== 0) {
+    this.negative = 0;
+    res = num.sub(this);
+    this.negative = 1;
+    return res;
+  }
+
+  if (this.length &gt; num.length) return this.clone().iadd(num);
+
+  return num.clone().iadd(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+const BN = require('bn.js');
+
+var a = new BN('dead', 16);
+var b = new BN('101010', 2);
+
+var res = a.<span class="apidocCodeKeywordSpan">add</span>(b);
+console.log(res.toString(10));  // 57047
+```
+
+**Note**: decimals are not supported in this library.
+
+## Notation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.addn" id="apidoc.element.bn.js.BN.prototype.addn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>addn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addn(num) {
+  return this.clone().iaddn(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.and" id="apidoc.element.bn.js.BN.prototype.and">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>and
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function and(num) {
+  if (this.length &gt; num.length) return this.clone().iand(num);
+  return num.clone().iand(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.<span class="apidocCodeKeywordSpan">and</span>(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.andln" id="apidoc.element.bn.js.BN.prototype.andln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>andln
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function andln(num) {
+  return this.words[0] &amp; num;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.bincn" id="apidoc.element.bn.js.BN.prototype.bincn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>bincn
+        <span class="apidocSignatureSpan">(bit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bincn(bit) {
+  assert(typeof bit === 'number');
+  var r = bit % 26;
+  var s = (bit - r) / 26;
+  var q = 1 &lt;&lt; r;
+
+  // Fast case: bit is much higher than all existing words
+  if (this.length &lt;= s) {
+    this._expand(s + 1);
+    this.words[s] |= q;
+    return this;
+  }
+
+  // Add bit and propagate, if needed
+  var carry = q;
+  for (var i = s; carry !== 0 &amp;&amp; i &lt; this.length; i++) {
+    var w = this.words[i] | 0;
+    w += carry;
+    carry = w &gt;&gt;&gt; 26;
+    w &amp;= 0x3ffffff;
+    this.words[i] = w;
+  }
+  if (carry !== 0) {
+    this.words[i] = carry;
+    this.length++;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.<span class="apidocCodeKeywordSpan">bincn</span>(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+* `a.egcd(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+* `a.invm(b)` - inverse `a` modulo `b`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.bitLength" id="apidoc.element.bn.js.BN.prototype.bitLength">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>bitLength
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bitLength() {
+  var w = this.words[this.length - 1];
+  var hi = this._countBits(w);
+  return (this.length - 1) * 26 + hi;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.<span class="apidocCodeKeywordSpan">bitLength</span>()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.byteLength" id="apidoc.element.bn.js.BN.prototype.byteLength">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>byteLength
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function byteLength() {
+  return Math.ceil(this.bitLength() / 8);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.<span class="apidocCodeKeywordSpan">byteLength</span>()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.clone" id="apidoc.element.bn.js.BN.prototype.clone">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clone() {
+  var r = new BN(null);
+  this.copy(r);
+  return r;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Instructions
+
+Prefixes/postfixes are put in parens at the of the line. `endian` - could be
+either `le` (little-endian) or `be` (big-endian).
+
+### Utilities
+
+* `a.<span class="apidocCodeKeywordSpan">clone</span>()` - clone number
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+which must behave like an `Array`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.cmp" id="apidoc.element.bn.js.BN.prototype.cmp">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>cmp
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cmp(num) {
+  if (this.negative !== 0 &amp;&amp; num.negative === 0) return -1;
+  if (this.negative === 0 &amp;&amp; num.negative !== 0) return 1;
+
+  var res = this.ucmp(num);
+  if (this.negative !== 0) return -res | 0;
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.<span class="apidocCodeKeywordSpan">cmp</span>(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (
+a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.cmpn" id="apidoc.element.bn.js.BN.prototype.cmpn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>cmpn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cmpn(num) {
+  var negative = num &lt; 0;
+
+  if (this.negative !== 0 &amp;&amp; !negative) return -1;
+  if (this.negative === 0 &amp;&amp; negative) return 1;
+
+  this.strip();
+
+  var res;
+  if (this.length &gt; 1) {
+    res = 1;
+  } else {
+    if (negative) {
+      num = -num;
+    }
+
+    assert(num &lt;= 0x3ffffff, 'Number is too big');
+
+    var w = this.words[0] | 0;
+    res = w === num ? 0 : w &lt; num ? -1 : 1;
+  }
+  if (this.negative !== 0) return -res | 0;
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.copy" id="apidoc.element.bn.js.BN.prototype.copy">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>copy
+        <span class="apidocSignatureSpan">(dest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copy(dest) {
+  dest.words = new Array(this.length);
+  for (var i = 0; i &lt; this.length; i++) {
+    dest.words[i] = this.words[i];
+  }
+  dest.length = this.length;
+  dest.negative = this.negative;
+  dest.red = this.red;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.div" id="apidoc.element.bn.js.BN.prototype.div">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>div
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function div(num) {
+  return this.divmod(num, 'div', false).div;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.<span class="apidocCodeKeywordSpan">div</span>(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.divRound" id="apidoc.element.bn.js.BN.prototype.divRound">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divRound
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function divRound(num) {
+  var dm = this.divmod(num);
+
+  // Fast case - exact division
+  if (dm.mod.isZero()) return dm.div;
+
+  var mod = dm.div.negative !== 0 ? dm.mod.isub(num) : dm.mod;
+
+  var half = num.ushrn(1);
+  var r2 = num.andln(1);
+  var cmp = mod.cmp(half);
+
+  // Round down
+  if (cmp &lt; 0 || r2 === 1 &amp;&amp; cmp === 0) return dm.div;
+
+  // Round up
+  return dm.div.negative !== 0 ? dm.div.isubn(1) : dm.div.iaddn(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.<span class="apidocCodeKeywordSpan">divRound</span>(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.divmod" id="apidoc.element.bn.js.BN.prototype.divmod">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divmod
+        <span class="apidocSignatureSpan">(num, mode, positive)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function divmod(num, mode, positive) {
+  assert(!num.isZero());
+
+  if (this.isZero()) {
+    return {
+      div: new BN(0),
+      mod: new BN(0)
+    };
+  }
+
+  var div, mod, res;
+  if (this.negative !== 0 &amp;&amp; num.negative === 0) {
+    res = this.neg().divmod(num, mode);
+
+    if (mode !== 'mod') {
+      div = res.div.neg();
+    }
+
+    if (mode !== 'div') {
+      mod = res.mod.neg();
+      if (positive &amp;&amp; mod.negative !== 0) {
+        mod.iadd(num);
+      }
+    }
+
+    return {
+      div: div,
+      mod: mod
+    };
+  }
+
+  if (this.negative === 0 &amp;&amp; num.negative !== 0) {
+    res = this.divmod(num.neg(), mode);
+
+    if (mode !== 'mod') {
+      div = res.div.neg();
+    }
+
+    return {
+      div: div,
+      mod: res.mod
+    };
+  }
+
+  if ((this.negative &amp; num.negative) !== 0) {
+    res = this.neg().divmod(num.neg(), mode);
+
+    if (mode !== 'div') {
+      mod = res.mod.neg();
+      if (positive &amp;&amp; mod.negative !== 0) {
+        mod.isub(num);
+      }
+    }
+
+    return {
+      div: res.div,
+      mod: mod
+    };
+  }
+
+  // Both numbers are positive at this point
+
+  // Strip both numbers to approximate shift value
+  if (num.length &gt; this.length || this.cmp(num) &lt; 0) {
+    return {
+      div: new BN(0),
+      mod: this
+    };
+  }
+
+  // Very short reduction
+  if (num.length === 1) {
+    if (mode === 'div') {
+      return {
+        div: this.divn(num.words[0]),
+        mod: null
+      };
+    }
+
+    if (mode === 'mod') {
+      return {
+        div: null,
+        mod: new BN(this.modn(num.words[0]))
+      };
+    }
+
+    return {
+      div: this.divn(num.words[0]),
+      mod: new BN(this.modn(num.words[0]))
+    };
+  }
+
+  return this._wordDiv(num, mode);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.divn" id="apidoc.element.bn.js.BN.prototype.divn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>divn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function divn(num) {
+  return this.clone().idivn(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.egcd" id="apidoc.element.bn.js.BN.prototype.egcd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>egcd
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function egcd(p) {
+  assert(p.negative === 0);
+  assert(!p.isZero());
+
+  var x = this;
+  var y = p.clone();
+
+  if (x.negative !== 0) {
+    x = x.umod(p);
+  } else {
+    x = x.clone();
+  }
+
+  // A * x + B * y = x
+  var A = new BN(1);
+  var B = new BN(0);
+
+  // C * x + D * y = y
+  var C = new BN(0);
+  var D = new BN(1);
+
+  var g = 0;
+
+  while (x.isEven() &amp;&amp; y.isEven()) {
+    x.iushrn(1);
+    y.iushrn(1);
+    ++g;
+  }
+
+  var yp = y.clone();
+  var xp = x.clone();
+
+  while (!x.isZero()) {
+    for (var i = 0, im = 1; (x.words[0] &amp; im) === 0 &amp;&amp; i &lt; 26; ++i, im &lt;&lt;= 1);
+    if (i &gt; 0) {
+      x.iushrn(i);
+      while (i-- &gt; 0) {
+        if (A.isOdd() || B.isOdd()) {
+          A.iadd(yp);
+          B.isub(xp);
+        }
+
+        A.iushrn(1);
+        B.iushrn(1);
+      }
+    }
+
+    for (var j = 0, jm = 1; (y.words[0] &amp; jm) === 0 &amp;&amp; j &lt; 26; ++j, jm &lt;&lt;= 1);
+    if (j &gt; 0) {
+      y.iushrn(j);
+      while (j-- &gt; 0) {
+        if (C.isOdd() || D.isOdd()) {
+          C.iadd(yp);
+          D.isub(xp);
+        }
+
+        C.iushrn(1);
+        D.iushrn(1);
+      }
+    }
+
+    if (x.cmp(y) &gt;= 0) {
+      x.isub(y);
+      A.isub(C);
+      B.isub(D);
+    } else {
+      y.isub(x);
+      C.isub(A);
+      D.isub(B);
+    }
+  }
+
+  return {
+    a: C,
+    b: D,
+    gcd: y.iushln(g)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+* `a.<span class="apidocCodeKeywordSpan">egcd</span>(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+* `a.invm(b)` - inverse `a` modulo `b`
+
+## Fast reduction
+
+When doing lots of reductions using the same modulo, it might be beneficial to
+use some tricks: like [Montgomery multiplication][0], or using special algorithm
+for [Mersenne Prime][1].
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.eq" id="apidoc.element.bn.js.BN.prototype.eq">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>eq
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eq(num) {
+  return this.cmp(num) === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.<span class="apidocCodeKeywordSpan">eq</span>(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.eqn" id="apidoc.element.bn.js.BN.prototype.eqn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>eqn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eqn(num) {
+  return this.cmpn(num) === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.forceRed" id="apidoc.element.bn.js.BN.prototype.forceRed">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>forceRed
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forceRed(ctx) {
+  assert(!this.red, 'Already a number in reduction context');
+  return this._forceRed(ctx);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.fromRed" id="apidoc.element.bn.js.BN.prototype.fromRed">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>fromRed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromRed() {
+  assert(this.red, 'fromRed works only with numbers in reduction context');
+  return this.red.convertFrom(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var redA = a.toRed(red);
+```
+Where `red` is a reduction context created using instructions above
+
+Here is how to convert them back:
+
+```js
+var a = redA.<span class="apidocCodeKeywordSpan">fromRed</span>();
+```
+
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.fromTwos" id="apidoc.element.bn.js.BN.prototype.fromTwos">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>fromTwos
+        <span class="apidocSignatureSpan">(width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromTwos(width) {
+  if (this.testn(width - 1)) {
+    return this.notn(width).iaddn(1).ineg();
+  }
+  return this.clone();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.<span class="apidocCodeKeywordSpan">fromTwos</span>(width)` - convert from two's complement representation, where `width
+` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.gcd" id="apidoc.element.bn.js.BN.prototype.gcd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gcd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gcd(num) {
+  if (this.isZero()) return num.abs();
+  if (num.isZero()) return this.abs();
+
+  var a = this.clone();
+  var b = num.clone();
+  a.negative = 0;
+  b.negative = 0;
+
+  // Remove common factor of two
+  for (var shift = 0; a.isEven() &amp;&amp; b.isEven(); shift++) {
+    a.iushrn(1);
+    b.iushrn(1);
+  }
+
+  do {
+    while (a.isEven()) {
+      a.iushrn(1);
+    }
+    while (b.isEven()) {
+      b.iushrn(1);
+    }
+
+    var r = a.cmp(b);
+    if (r &lt; 0) {
+      // Swap `a` and `b` to make `a` always bigger than `b`
+      var t = a;
+      a = b;
+      b = t;
+    } else if (r === 0 || b.cmpn(1) === 0) {
+      break;
+    }
+
+    a.isub(b);
+  } while (true);
+
+  return b.iushln(shift);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.<span class="apidocCodeKeywordSpan">gcd</span>(b)` - GCD
+* `a.egcd(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+* `a.invm(b)` - inverse `a` modulo `b`
+
+## Fast reduction
+
+When doing lots of reductions using the same modulo, it might be beneficial to
+use some tricks: like [Montgomery multiplication][0], or using special algorithm
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.gt" id="apidoc.element.bn.js.BN.prototype.gt">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gt(num) {
+  return this.cmp(num) === 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.<span class="apidocCodeKeywordSpan">gt</span>(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.gte" id="apidoc.element.bn.js.BN.prototype.gte">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gte
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gte(num) {
+  return this.cmp(num) &gt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.<span class="apidocCodeKeywordSpan">gte</span>(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.gten" id="apidoc.element.bn.js.BN.prototype.gten">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gten
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gten(num) {
+  return this.cmpn(num) &gt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.gtn" id="apidoc.element.bn.js.BN.prototype.gtn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>gtn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gtn(num) {
+  return this.cmpn(num) === 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iabs" id="apidoc.element.bn.js.BN.prototype.iabs">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iabs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iabs() {
+  this.negative = 0;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iadd" id="apidoc.element.bn.js.BN.prototype.iadd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iadd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iadd(num) {
+  var r;
+
+  // negative + positive
+  if (this.negative !== 0 &amp;&amp; num.negative === 0) {
+    this.negative = 0;
+    r = this.isub(num);
+    this.negative ^= 1;
+    return this._normSign();
+
+  // positive + negative
+  } else if (this.negative === 0 &amp;&amp; num.negative !== 0) {
+    num.negative = 0;
+    r = this.isub(num);
+    num.negative = 1;
+    return r._normSign();
+  }
+
+  // a.length &gt; b.length
+  var a, b;
+  if (this.length &gt; num.length) {
+    a = this;
+    b = num;
+  } else {
+    a = num;
+    b = this;
+  }
+
+  var carry = 0;
+  for (var i = 0; i &lt; b.length; i++) {
+    r = (a.words[i] | 0) + (b.words[i] | 0) + carry;
+    this.words[i] = r &amp; 0x3ffffff;
+    carry = r &gt;&gt;&gt; 26;
+  }
+  for (; carry !== 0 &amp;&amp; i &lt; a.length; i++) {
+    r = (a.words[i] | 0) + carry;
+    this.words[i] = r &amp; 0x3ffffff;
+    carry = r &gt;&gt;&gt; 26;
+  }
+
+  this.length = a.length;
+  if (carry !== 0) {
+    this.words[this.length] = carry;
+    this.length++;
+  // Copy the rest of the words
+  } else if (a !== this) {
+    for (; i &lt; a.length; i++) {
+      this.words[i] = a.words[i];
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The only available postfix at the moment is:
+
+* `n` - which means that the argument of the function must be a plain JavaScript
+  number
+
+### Examples
+
+* `a.<span class="apidocCodeKeywordSpan">iadd</span>(b)` - perform addition on `a` and `b`, storing the result in `a`
+* `a.pmod(b)` - reduce `a` modulo `b`, returning positive value
+* `a.iushln(13)` - shift bits of `a` left by 13
+
+## Instructions
+
+Prefixes/postfixes are put in parens at the of the line. `endian` - could be
+either `le` (little-endian) or `be` (big-endian).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iaddn" id="apidoc.element.bn.js.BN.prototype.iaddn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iaddn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iaddn(num) {
+  assert(typeof num === 'number');
+  assert(num &lt; 0x4000000);
+  if (num &lt; 0) return this.isubn(-num);
+
+  // Possible sign change
+  if (this.negative !== 0) {
+    if (this.length === 1 &amp;&amp; (this.words[0] | 0) &lt; num) {
+      this.words[0] = num - (this.words[0] | 0);
+      this.negative = 0;
+      return this;
+    }
+
+    this.negative = 0;
+    this.isubn(num);
+    this.negative = 1;
+    return this;
+  }
+
+  // Add without checks
+  return this._iaddn(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iand" id="apidoc.element.bn.js.BN.prototype.iand">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iand
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iand(num) {
+  assert((this.negative | num.negative) === 0);
+  return this.iuand(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.idivn" id="apidoc.element.bn.js.BN.prototype.idivn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>idivn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function idivn(num) {
+  assert(num &lt;= 0x3ffffff);
+
+  var carry = 0;
+  for (var i = this.length - 1; i &gt;= 0; i--) {
+    var w = (this.words[i] | 0) + carry * 0x4000000;
+    this.words[i] = (w / num) | 0;
+    carry = w % num;
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.imaskn" id="apidoc.element.bn.js.BN.prototype.imaskn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imaskn
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function imaskn(bits) {
+  assert(typeof bits === 'number' &amp;&amp; bits &gt;= 0);
+  var r = bits % 26;
+  var s = (bits - r) / 26;
+
+  assert(this.negative === 0, 'imaskn works only with positive numbers');
+
+  if (this.length &lt;= s) {
+    return this;
+  }
+
+  if (r !== 0) {
+    s++;
+  }
+  this.length = Math.min(s, this.length);
+
+  if (r !== 0) {
+    var mask = 0x3ffffff ^ ((0x3ffffff &gt;&gt;&gt; r) &lt;&lt; r);
+    this.words[this.length - 1] &amp;= mask;
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.imul" id="apidoc.element.bn.js.BN.prototype.imul">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function imul(num) {
+  return this.clone().mulTo(num, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  src.push('out.length = ' + len + ';');
+
+  for (var k = 0; k &lt; len; k++) {
+var minJ = Math.max(0, k - alen + 1);
+var maxJ = Math.min(k, blen - 1);
+
+src.push('\/* k = ' + k + ' *\/');
+src.push('lo = Math.<span class="apidocCodeKeywordSpan">imul</span>(al' + (k - minJ) + ', bl' + minJ + '
+;);');
+src.push('mid = Math.imul(al' + (k - minJ) + ', bh' + minJ + ');');
+src.push(
+    'mid = (mid + Math.imul(ah' + (k - minJ) + ', bl' + minJ + ')) | 0;');
+src.push('hi = Math.imul(ah' + (k - minJ) + ', bh' + minJ + ');');
+
+for (var j = minJ + 1; j &lt;= maxJ; j++) {
+  i = k - j;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.imuln" id="apidoc.element.bn.js.BN.prototype.imuln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>imuln
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function imuln(num) {
+  assert(typeof num === 'number');
+  assert(num &lt; 0x4000000);
+
+  // Carry
+  var carry = 0;
+  for (var i = 0; i &lt; this.length; i++) {
+    var w = (this.words[i] | 0) * num;
+    var lo = (w &amp; 0x3ffffff) + (carry &amp; 0x3ffffff);
+    carry &gt;&gt;= 26;
+    carry += (w / 0x4000000) | 0;
+    // NOTE: lo is 27bit maximum
+    carry += lo &gt;&gt;&gt; 26;
+    this.words[i] = lo &amp; 0x3ffffff;
+  }
+
+  if (carry !== 0) {
+    this.words[i] = carry;
+    this.length++;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ineg" id="apidoc.element.bn.js.BN.prototype.ineg">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ineg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ineg() {
+  if (!this.isZero()) {
+    this.negative ^= 1;
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.inotn" id="apidoc.element.bn.js.BN.prototype.inotn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>inotn
+        <span class="apidocSignatureSpan">(width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inotn(width) {
+  assert(typeof width === 'number' &amp;&amp; width &gt;= 0);
+
+  var bytesNeeded = Math.ceil(width / 26) | 0;
+  var bitsLeft = width % 26;
+
+  // Extend the buffer with leading zeroes
+  this._expand(bytesNeeded);
+
+  if (bitsLeft &gt; 0) {
+    bytesNeeded--;
+  }
+
+  // Handle complete words
+  for (var i = 0; i &lt; bytesNeeded; i++) {
+    this.words[i] = ~this.words[i] &amp; 0x3ffffff;
+  }
+
+  // Handle the residue
+  if (bitsLeft &gt; 0) {
+    this.words[i] = ~this.words[i] &amp; (0x3ffffff &gt;&gt; (26 - bitsLeft));
+  }
+
+  // And remove leading zeroes
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.inspect" id="apidoc.element.bn.js.BN.prototype.inspect">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>inspect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inspect() {
+  return (this.red ? '&lt;BN-R: ' : '&lt;BN: ') + this.toString(16) + '&gt;';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.invm" id="apidoc.element.bn.js.BN.prototype.invm">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>invm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invm(num) {
+  return this.egcd(num).a.umod(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+* `a.egcd(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+* `a.<span class="apidocCodeKeywordSpan">invm</span>(b)` - inverse `a` modulo `b`
+
+## Fast reduction
+
+When doing lots of reductions using the same modulo, it might be beneficial to
+use some tricks: like [Montgomery multiplication][0], or using special algorithm
+for [Mersenne Prime][1].
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ior" id="apidoc.element.bn.js.BN.prototype.ior">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ior
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ior(num) {
+  assert((this.negative | num.negative) === 0);
+  return this.iuor(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isEven" id="apidoc.element.bn.js.BN.prototype.isEven">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isEven
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isEven() {
+  return (this.words[0] &amp; 1) === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.<span class="apidocCodeKeywordSpan">isEven</span>()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isNeg" id="apidoc.element.bn.js.BN.prototype.isNeg">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isNeg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNeg() {
+  return this.negative !== 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.<span class="apidocCodeKeywordSpan">isNeg</span>()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isOdd" id="apidoc.element.bn.js.BN.prototype.isOdd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isOdd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isOdd() {
+  return (this.words[0] &amp; 1) === 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.<span class="apidocCodeKeywordSpan">isOdd</span>()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isZero" id="apidoc.element.bn.js.BN.prototype.isZero">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isZero
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isZero() {
+  return this.length === 1 &amp;&amp; this.words[0] === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.<span class="apidocCodeKeywordSpan">isZero</span>()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ishln" id="apidoc.element.bn.js.BN.prototype.ishln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ishln
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ishln(bits) {
+  // TODO(indutny): implement me
+  assert(this.negative === 0);
+  return this.iushln(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ishrn" id="apidoc.element.bn.js.BN.prototype.ishrn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ishrn
+        <span class="apidocSignatureSpan">(bits, hint, extended)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ishrn(bits, hint, extended) {
+  // TODO(indutny): implement me
+  assert(this.negative === 0);
+  return this.iushrn(bits, hint, extended);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isqr" id="apidoc.element.bn.js.BN.prototype.isqr">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isqr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isqr() {
+  return this.imul(this.clone());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isub" id="apidoc.element.bn.js.BN.prototype.isub">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isub(num) {
+  // this - (-num) = this + num
+  if (num.negative !== 0) {
+    num.negative = 0;
+    var r = this.iadd(num);
+    num.negative = 1;
+    return r._normSign();
+
+  // -this - num = -(this + num)
+  } else if (this.negative !== 0) {
+    this.negative = 0;
+    this.iadd(num);
+    this.negative = 1;
+    return this._normSign();
+  }
+
+  // At this point both numbers are positive
+  var cmp = this.cmp(num);
+
+  // Optimization - zeroify
+  if (cmp === 0) {
+    this.negative = 0;
+    this.length = 1;
+    this.words[0] = 0;
+    return this;
+  }
+
+  // a &gt; b
+  var a, b;
+  if (cmp &gt; 0) {
+    a = this;
+    b = num;
+  } else {
+    a = num;
+    b = this;
+  }
+
+  var carry = 0;
+  for (var i = 0; i &lt; b.length; i++) {
+    r = (a.words[i] | 0) - (b.words[i] | 0) + carry;
+    carry = r &gt;&gt; 26;
+    this.words[i] = r &amp; 0x3ffffff;
+  }
+  for (; carry !== 0 &amp;&amp; i &lt; a.length; i++) {
+    r = (a.words[i] | 0) + carry;
+    carry = r &gt;&gt; 26;
+    this.words[i] = r &amp; 0x3ffffff;
+  }
+
+  // Copy rest of the words
+  if (carry === 0 &amp;&amp; i &lt; a.length &amp;&amp; a !== this) {
+    for (; i &lt; a.length; i++) {
+      this.words[i] = a.words[i];
+    }
+  }
+
+  this.length = Math.max(this.length, i);
+
+  if (a !== this) {
+    this.negative = 1;
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.isubn" id="apidoc.element.bn.js.BN.prototype.isubn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>isubn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isubn(num) {
+  assert(typeof num === 'number');
+  assert(num &lt; 0x4000000);
+  if (num &lt; 0) return this.iaddn(-num);
+
+  if (this.negative !== 0) {
+    this.negative = 0;
+    this.iaddn(num);
+    this.negative = 1;
+    return this;
+  }
+
+  this.words[0] -= num;
+
+  if (this.length === 1 &amp;&amp; this.words[0] &lt; 0) {
+    this.words[0] = -this.words[0];
+    this.negative = 1;
+  } else {
+    // Carry
+    for (var i = 0; i &lt; this.length &amp;&amp; this.words[i] &lt; 0; i++) {
+      this.words[i] += 0x4000000;
+      this.words[i + 1] -= 1;
+    }
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iuand" id="apidoc.element.bn.js.BN.prototype.iuand">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuand
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iuand(num) {
+  // b = min-length(num, this)
+  var b;
+  if (this.length &gt; num.length) {
+    b = num;
+  } else {
+    b = this;
+  }
+
+  for (var i = 0; i &lt; b.length; i++) {
+    this.words[i] = this.words[i] &amp; num.words[i];
+  }
+
+  this.length = b.length;
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iuor" id="apidoc.element.bn.js.BN.prototype.iuor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iuor(num) {
+  while (this.length &lt; num.length) {
+    this.words[this.length++] = 0;
+  }
+
+  for (var i = 0; i &lt; num.length; i++) {
+    this.words[i] = this.words[i] | num.words[i];
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iushln" id="apidoc.element.bn.js.BN.prototype.iushln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iushln
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iushln(bits) {
+  assert(typeof bits === 'number' &amp;&amp; bits &gt;= 0);
+  var r = bits % 26;
+  var s = (bits - r) / 26;
+  var carryMask = (0x3ffffff &gt;&gt;&gt; (26 - r)) &lt;&lt; (26 - r);
+  var i;
+
+  if (r !== 0) {
+    var carry = 0;
+
+    for (i = 0; i &lt; this.length; i++) {
+      var newCarry = this.words[i] &amp; carryMask;
+      var c = ((this.words[i] | 0) - newCarry) &lt;&lt; r;
+      this.words[i] = c | carry;
+      carry = newCarry &gt;&gt;&gt; (26 - r);
+    }
+
+    if (carry) {
+      this.words[i] = carry;
+      this.length++;
+    }
+  }
+
+  if (s !== 0) {
+    for (i = this.length - 1; i &gt;= 0; i--) {
+      this.words[i + s] = this.words[i];
+    }
+
+    for (i = 0; i &lt; s; i++) {
+      this.words[i] = 0;
+    }
+
+    this.length += s;
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `n` - which means that the argument of the function must be a plain JavaScript
+  number
+
+### Examples
+
+* `a.iadd(b)` - perform addition on `a` and `b`, storing the result in `a`
+* `a.pmod(b)` - reduce `a` modulo `b`, returning positive value
+* `a.<span class="apidocCodeKeywordSpan">iushln</span>(13)` - shift bits of `a` left by 13
+
+## Instructions
+
+Prefixes/postfixes are put in parens at the of the line. `endian` - could be
+either `le` (little-endian) or `be` (big-endian).
+
+### Utilities
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iushrn" id="apidoc.element.bn.js.BN.prototype.iushrn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iushrn
+        <span class="apidocSignatureSpan">(bits, hint, extended)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iushrn(bits, hint, extended) {
+  assert(typeof bits === 'number' &amp;&amp; bits &gt;= 0);
+  var h;
+  if (hint) {
+    h = (hint - (hint % 26)) / 26;
+  } else {
+    h = 0;
+  }
+
+  var r = bits % 26;
+  var s = Math.min((bits - r) / 26, this.length);
+  var mask = 0x3ffffff ^ ((0x3ffffff &gt;&gt;&gt; r) &lt;&lt; r);
+  var maskedWords = extended;
+
+  h -= s;
+  h = Math.max(0, h);
+
+  // Extended mode, copy masked part
+  if (maskedWords) {
+    for (var i = 0; i &lt; s; i++) {
+      maskedWords.words[i] = this.words[i];
+    }
+    maskedWords.length = s;
+  }
+
+  if (s === 0) {
+    // No-op, we should not move anything at all
+  } else if (this.length &gt; s) {
+    this.length -= s;
+    for (i = 0; i &lt; this.length; i++) {
+      this.words[i] = this.words[i + s];
+    }
+  } else {
+    this.words[0] = 0;
+    this.length = 1;
+  }
+
+  var carry = 0;
+  for (i = this.length - 1; i &gt;= 0 &amp;&amp; (carry !== 0 || i &gt;= h); i--) {
+    var word = this.words[i] | 0;
+    this.words[i] = (carry &lt;&lt; (26 - r)) | (word &gt;&gt;&gt; r);
+    carry = word &amp; mask;
+  }
+
+  // Push carried bits as a mask
+  if (maskedWords &amp;&amp; carry !== 0) {
+    maskedWords.words[maskedWords.length++] = carry;
+  }
+
+  if (this.length === 0) {
+    this.words[0] = 0;
+    this.length = 1;
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.iuxor" id="apidoc.element.bn.js.BN.prototype.iuxor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>iuxor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function iuxor(num) {
+  // a.length &gt; b.length
+  var a;
+  var b;
+  if (this.length &gt; num.length) {
+    a = this;
+    b = num;
+  } else {
+    a = num;
+    b = this;
+  }
+
+  for (var i = 0; i &lt; b.length; i++) {
+    this.words[i] = a.words[i] ^ b.words[i];
+  }
+
+  if (this !== a) {
+    for (; i &lt; a.length; i++) {
+      this.words[i] = a.words[i];
+    }
+  }
+
+  this.length = a.length;
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ixor" id="apidoc.element.bn.js.BN.prototype.ixor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ixor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ixor(num) {
+  assert((this.negative | num.negative) === 0);
+  return this.iuxor(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.lt" id="apidoc.element.bn.js.BN.prototype.lt">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lt(num) {
+  return this.cmp(num) === -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.<span class="apidocCodeKeywordSpan">lt</span>(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.lte" id="apidoc.element.bn.js.BN.prototype.lte">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lte
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lte(num) {
+  return this.cmp(num) &lt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.<span class="apidocCodeKeywordSpan">lte</span>(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.lten" id="apidoc.element.bn.js.BN.prototype.lten">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>lten
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lten(num) {
+  return this.cmpn(num) &lt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ltn" id="apidoc.element.bn.js.BN.prototype.ltn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ltn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ltn(num) {
+  return this.cmpn(num) === -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.maskn" id="apidoc.element.bn.js.BN.prototype.maskn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>maskn
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function maskn(bits) {
+  return this.clone().imaskn(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.<span class="apidocCodeKeywordSpan">maskn</span>(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+* `a.egcd(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.mod" id="apidoc.element.bn.js.BN.prototype.mod">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mod
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mod(num) {
+  return this.divmod(num, 'mod', false).mod;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.<span class="apidocCodeKeywordSpan">mod</span>(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+with `andn` in future)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.modn" id="apidoc.element.bn.js.BN.prototype.modn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>modn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function modn(num) {
+  assert(num &lt;= 0x3ffffff);
+  var p = (1 &lt;&lt; 26) % num;
+
+  var acc = 0;
+  for (var i = this.length - 1; i &gt;= 0; i--) {
+    acc = (p * acc + (this.words[i] | 0)) % num;
+  }
+
+  return acc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.mul" id="apidoc.element.bn.js.BN.prototype.mul">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mul(num) {
+  var out = new BN(null);
+  out.words = new Array(this.length + num.length);
+  return this.mulTo(num, out);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.<span class="apidocCodeKeywordSpan">mul</span>(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.mulTo" id="apidoc.element.bn.js.BN.prototype.mulTo">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mulTo
+        <span class="apidocSignatureSpan">(num, out)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mulTo(num, out) {
+  var res;
+  var len = this.length + num.length;
+  if (this.length === 10 &amp;&amp; num.length === 10) {
+    res = comb10MulTo(this, num, out);
+  } else if (len &lt; 63) {
+    res = smallMulTo(this, num, out);
+  } else if (len &lt; 1024) {
+    res = bigMulTo(this, num, out);
+  } else {
+    res = jumboMulTo(this, num, out);
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.mulf" id="apidoc.element.bn.js.BN.prototype.mulf">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>mulf
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mulf(num) {
+  var out = new BN(null);
+  out.words = new Array(this.length + num.length);
+  return jumboMulTo(this, num, out);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.muln" id="apidoc.element.bn.js.BN.prototype.muln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>muln
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function muln(num) {
+  return this.clone().imuln(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.neg" id="apidoc.element.bn.js.BN.prototype.neg">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>neg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function neg() {
+  return this.clone().ineg();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.toTwos(width)` - convert to two's complement representation, where `width` is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.<span class="apidocCodeKeywordSpan">neg</span>()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.notn" id="apidoc.element.bn.js.BN.prototype.notn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>notn
+        <span class="apidocSignatureSpan">(width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notn(width) {
+  return this.clone().inotn(width);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.<span class="apidocCodeKeywordSpan">notn</span>(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+* `a.egcd(b)` - Extended GCD results (`{ a: ..., b: ..., gcd: ... }`)
+* `a.invm(b)` - inverse `a` modulo `b`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.or" id="apidoc.element.bn.js.BN.prototype.or">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>or
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function or(num) {
+  if (this.length &gt; num.length) return this.clone().ior(num);
+  return num.clone().ior(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.<span class="apidocCodeKeywordSpan">or</span>(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.pow" id="apidoc.element.bn.js.BN.prototype.pow">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>pow
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pow(num) {
+  var w = toBitArray(num);
+  if (w.length === 0) return new BN(1);
+
+  // Skip leading zeroes
+  var res = this;
+  for (var i = 0; i &lt; w.length; i++, res = res.sqr()) {
+    if (w[i] !== 0) break;
+  }
+
+  if (++i &lt; w.length) {
+    for (var q = res.sqr(); i &lt; w.length; i++, q = q.sqr()) {
+      if (w[i] === 0) continue;
+
+      res = res.mul(q);
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.<span class="apidocCodeKeywordSpan">pow</span>(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redAdd" id="apidoc.element.bn.js.BN.prototype.redAdd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redAdd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redAdd(num) {
+  assert(this.red, 'redAdd works only with red numbers');
+  return this.red.add(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.<span class="apidocCodeKeywordSpan">redAdd</span>(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redIAdd" id="apidoc.element.bn.js.BN.prototype.redIAdd">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redIAdd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redIAdd(num) {
+  assert(this.red, 'redIAdd works only with red numbers');
+  return this.red.iadd(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.<span class="apidocCodeKeywordSpan">redIAdd</span>(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redIMul" id="apidoc.element.bn.js.BN.prototype.redIMul">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redIMul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redIMul(num) {
+  assert(this.red, 'redMul works only with red numbers');
+  this.red._verify2(this, num);
+  return this.red.imul(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.<span class="apidocCodeKeywordSpan">redIMul</span>(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redISqr" id="apidoc.element.bn.js.BN.prototype.redISqr">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redISqr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redISqr() {
+  assert(this.red, 'redISqr works only with red numbers');
+  this.red._verify1(this);
+  return this.red.isqr(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.<span class="apidocCodeKeywordSpan">redISqr</span>()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redISub" id="apidoc.element.bn.js.BN.prototype.redISub">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redISub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redISub(num) {
+  assert(this.red, 'redISub works only with red numbers');
+  return this.red.isub(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.<span class="apidocCodeKeywordSpan">redISub</span>(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redInvm" id="apidoc.element.bn.js.BN.prototype.redInvm">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redInvm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redInvm() {
+  assert(this.red, 'redInvm works only with red numbers');
+  this.red._verify1(this);
+  return this.red.invm(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.<span class="apidocCodeKeywordSpan">redInvm</span>()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+
+This software is licensed under the MIT License.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redMul" id="apidoc.element.bn.js.BN.prototype.redMul">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redMul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redMul(num) {
+  assert(this.red, 'redMul works only with red numbers');
+  this.red._verify2(this, num);
+  return this.red.mul(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.<span class="apidocCodeKeywordSpan">redMul</span>(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redNeg" id="apidoc.element.bn.js.BN.prototype.redNeg">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redNeg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redNeg() {
+  assert(this.red, 'redNeg works only with red numbers');
+  this.red._verify1(this);
+  return this.red.neg(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.<span class="apidocCodeKeywordSpan">redNeg</span>()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2015.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redPow" id="apidoc.element.bn.js.BN.prototype.redPow">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redPow
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redPow(num) {
+  assert(this.red &amp;&amp; !num.red, 'redPow(normalNum)');
+  this.red._verify1(this);
+  return this.red.pow(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.<span class="apidocCodeKeywordSpan">redPow</span>(b)` - modular exponentiation
+
+## LICENSE
+
+This software is licensed under the MIT License.
+
+Copyright Fedor Indutny, 2015.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redShl" id="apidoc.element.bn.js.BN.prototype.redShl">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redShl
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redShl(num) {
+  assert(this.red, 'redShl works only with red numbers');
+  return this.red.shl(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.<span class="apidocCodeKeywordSpan">redShl</span>(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redSqr" id="apidoc.element.bn.js.BN.prototype.redSqr">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSqr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redSqr() {
+  assert(this.red, 'redSqr works only with red numbers');
+  this.red._verify1(this);
+  return this.red.sqr(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.<span class="apidocCodeKeywordSpan">redSqr</span>()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redSqrt" id="apidoc.element.bn.js.BN.prototype.redSqrt">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSqrt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redSqrt() {
+  assert(this.red, 'redSqrt works only with red numbers');
+  this.red._verify1(this);
+  return this.red.sqrt(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.redSub(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.<span class="apidocCodeKeywordSpan">redSqrt</span>()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+
+## LICENSE
+
+This software is licensed under the MIT License.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.redSub" id="apidoc.element.bn.js.BN.prototype.redSub">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>redSub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function redSub(num) {
+  assert(this.red, 'redSub works only with red numbers');
+  return this.red.sub(this, num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Red instructions
+
+Most of the instructions from the very start of this readme have their
+counterparts in red context:
+
+* `a.redAdd(b)`, `a.redIAdd(b)`
+* `a.<span class="apidocCodeKeywordSpan">redSub</span>(b)`, `a.redISub(b)`
+* `a.redShl(num)`
+* `a.redMul(b)`, `a.redIMul(b)`
+* `a.redSqr()`, `a.redISqr()`
+* `a.redSqrt()` - square root modulo reduction context's prime
+* `a.redInvm()` - modular inverse of the number
+* `a.redNeg()`
+* `a.redPow(b)` - modular exponentiation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.setn" id="apidoc.element.bn.js.BN.prototype.setn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>setn
+        <span class="apidocSignatureSpan">(bit, val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setn(bit, val) {
+  assert(typeof bit === 'number' &amp;&amp; bit &gt;= 0);
+
+  var off = (bit / 26) | 0;
+  var wbit = bit % 26;
+
+  this._expand(off + 1);
+
+  if (val) {
+    this.words[off] = this.words[off] | (1 &lt;&lt; wbit);
+  } else {
+    this.words[off] = this.words[off] &amp; ~(1 &lt;&lt; wbit);
+  }
+
+  return this.strip();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.<span class="apidocCodeKeywordSpan">setn</span>(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.shln" id="apidoc.element.bn.js.BN.prototype.shln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>shln
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shln(bits) {
+  return this.clone().ishln(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.<span class="apidocCodeKeywordSpan">shln</span>(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.shrn" id="apidoc.element.bn.js.BN.prototype.shrn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>shrn
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shrn(bits) {
+  return this.clone().ishrn(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.<span class="apidocCodeKeywordSpan">shrn</span>(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.sqr" id="apidoc.element.bn.js.BN.prototype.sqr">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>sqr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sqr() {
+  return this.mul(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.sub(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.<span class="apidocCodeKeywordSpan">sqr</span>()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.strip" id="apidoc.element.bn.js.BN.prototype.strip">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>strip
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strip() {
+  while (this.length &gt; 1 &amp;&amp; this.words[this.length - 1] === 0) {
+    this.length--;
+  }
+  return this._normSign();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.sub" id="apidoc.element.bn.js.BN.prototype.sub">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>sub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sub(num) {
+  return this.clone().isub(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+* `a.add(b)` - addition (`i`, `n`, `in`)
+* `a.<span class="apidocCodeKeywordSpan">sub</span>(b)` - subtraction (`i`, `n`, `in`)
+* `a.mul(b)` - multiply (`i`, `n`, `in`)
+* `a.sqr()` - square (`i`)
+* `a.pow(b)` - raise `a` to the power of `b`
+* `a.div(b)` - divide (`divn`, `idivn`)
+* `a.mod(b)` - reduct (`u`, `n`) (but no `umodn`)
+* `a.divRound(b)` - rounded division
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.subn" id="apidoc.element.bn.js.BN.prototype.subn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>subn
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subn(num) {
+  return this.clone().isubn(num);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.testn" id="apidoc.element.bn.js.BN.prototype.testn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>testn
+        <span class="apidocSignatureSpan">(bit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testn(bit) {
+  assert(typeof bit === 'number' &amp;&amp; bit &gt;= 0);
+  var r = bit % 26;
+  var s = (bit - r) / 26;
+  var q = 1 &lt;&lt; r;
+
+  // Fast case: bit is much higher than all existing words
+  if (this.length &lt;= s) return false;
+
+  // Check bit and return
+  var w = this.words[s];
+
+  return !!(w &amp; q);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.xor(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.<span class="apidocCodeKeywordSpan">testn</span>(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+
+### Reduction
+
+* `a.gcd(b)` - GCD
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toArray" id="apidoc.element.bn.js.BN.prototype.toArray">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toArray
+        <span class="apidocSignatureSpan">(endian, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toArray(endian, length) {
+  return this.toArrayLike(Array, endian, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Utilities
+
+* `a.clone()` - clone number
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.<span class="apidocCodeKeywordSpan">toArray</span>(endian, length)` - convert to byte `Array`, and optionally zero
+pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+(example: `1010000` has 4 zero bits)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toArrayLike" id="apidoc.element.bn.js.BN.prototype.toArrayLike">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toArrayLike
+        <span class="apidocSignatureSpan">(ArrayType, endian, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toArrayLike(ArrayType, endian, length) {
+  var byteLength = this.byteLength();
+  var reqLength = length || Math.max(1, byteLength);
+  assert(byteLength &lt;= reqLength, 'byte array longer than desired length');
+  assert(reqLength &gt; 0, 'Requested array length &lt;= 0');
+
+  this.strip();
+  var littleEndian = endian === 'le';
+  var res = new ArrayType(reqLength);
+
+  var b, i;
+  var q = this.clone();
+  if (!littleEndian) {
+    // Assume big-endian
+    for (i = 0; i &lt; reqLength - byteLength; i++) {
+      res[i] = 0;
+    }
+
+    for (i = 0; !q.isZero(); i++) {
+      b = q.andln(0xff);
+      q.iushrn(8);
+
+      res[reqLength - i - 1] = b;
+    }
+  } else {
+    for (i = 0; !q.isZero(); i++) {
+      b = q.andln(0xff);
+      q.iushrn(8);
+
+      res[i] = b;
+    }
+
+    for (; i &lt; reqLength; i++) {
+      res[i] = 0;
+    }
+  }
+
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* `a.clone()` - clone number
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.<span class="apidocCodeKeywordSpan">toArrayLike</span>(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toBuffer" id="apidoc.element.bn.js.BN.prototype.toBuffer">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toBuffer
+        <span class="apidocSignatureSpan">(endian, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBuffer(endian, length) {
+  assert(typeof Buffer !== 'undefined');
+  return this.toArrayLike(Buffer, endian, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.<span class="apidocCodeKeywordSpan">toBuffer</span>(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toJSON" id="apidoc.element.bn.js.BN.prototype.toJSON">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJSON() {
+  return this.toString(16);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+either `le` (little-endian) or `be` (big-endian).
+
+### Utilities
+
+* `a.clone()` - clone number
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.toNumber()` - convert to Javascript Number (limited to 53 bits)
+* `a.<span class="apidocCodeKeywordSpan">toJSON</span>()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.zeroBits()` - return number of less-significant consequent zero bits
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toNumber" id="apidoc.element.bn.js.BN.prototype.toNumber">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toNumber
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toNumber() {
+  var ret = this.words[0];
+  if (this.length === 2) {
+    ret += this.words[1] * 0x4000000;
+  } else if (this.length === 3 &amp;&amp; this.words[2] === 0x01) {
+    // NOTE: at this stage it is known that the top bit is set
+    ret += 0x10000000000000 + (this.words[1] * 0x4000000);
+  } else if (this.length &gt; 2) {
+    assert(false, 'Number can only safely store up to 53 bits');
+  }
+  return (this.negative !== 0) ? -ret : ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Prefixes/postfixes are put in parens at the of the line. `endian` - could be
+either `le` (little-endian) or `be` (big-endian).
+
+### Utilities
+
+* `a.clone()` - clone number
+* `a.toString(base, length)` - convert to base-string and pad with zeroes
+* `a.<span class="apidocCodeKeywordSpan">toNumber</span>()` - convert to Javascript Number (limited to 53 bits)
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toRed" id="apidoc.element.bn.js.BN.prototype.toRed">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toRed
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toRed(ctx) {
+  assert(!this.red, 'Already a number in reduction context');
+  assert(this.negative === 0, 'red works only with positives');
+  return ctx.convertTo(this)._forceRed(ctx);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Convert inputs to reducted ones
+* Operate on them in reduction context
+* Convert outputs back from the reduction context
+
+Here is how one may convert numbers to `red`:
+
+```js
+var redA = a.<span class="apidocCodeKeywordSpan">toRed</span>(red);
+```
+Where `red` is a reduction context created using instructions above
+
+Here is how to convert them back:
+
+```js
+var a = redA.fromRed();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toString" id="apidoc.element.bn.js.BN.prototype.toString">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toString
+        <span class="apidocSignatureSpan">(base, padding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString(base, padding) {
+  base = base || 10;
+  padding = padding | 0 || 1;
+
+  var out;
+  if (base === 16 || base === 'hex') {
+    out = '';
+    var off = 0;
+    var carry = 0;
+    for (var i = 0; i &lt; this.length; i++) {
+      var w = this.words[i];
+      var word = (((w &lt;&lt; off) | carry) &amp; 0xffffff).toString(16);
+      carry = (w &gt;&gt;&gt; (24 - off)) &amp; 0xffffff;
+      if (carry !== 0 || i !== this.length - 1) {
+        out = zeros[6 - word.length] + word + out;
+      } else {
+        out = word + out;
+      }
+      off += 2;
+      if (off &gt;= 26) {
+        off -= 26;
+        i--;
+      }
+    }
+    if (carry !== 0) {
+      out = carry.toString(16) + out;
+    }
+    while (out.length % padding !== 0) {
+      out = '0' + out;
+    }
+    if (this.negative !== 0) {
+      out = '-' + out;
+    }
+    return out;
+  }
+
+  if (base === (base | 0) &amp;&amp; base &gt;= 2 &amp;&amp; base &lt;= 36) {
+    // var groupSize = Math.floor(BN.wordSize * Math.LN2 / Math.log(base));
+    var groupSize = groupSizes[base];
+    // var groupBase = Math.pow(base, groupSize);
+    var groupBase = groupBases[base];
+    out = '';
+    var c = this.clone();
+    c.negative = 0;
+    while (!c.isZero()) {
+      var r = c.modn(groupBase).toString(base);
+      c = c.idivn(groupBase);
+
+      if (!c.isZero()) {
+        out = zeros[groupSize - r.length] + r + out;
+      } else {
+        out = r + out;
+      }
+    }
+    if (this.isZero()) {
+      out = '0' + out;
+    }
+    while (out.length % padding !== 0) {
+      out = '0' + out;
+    }
+    if (this.negative !== 0) {
+      out = '-' + out;
+    }
+    return out;
+  }
+
+  assert(false, 'Base should be between 2 and 36');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+const BN = require('bn.js');
+
+var a = new BN('dead', 16);
+var b = new BN('101010', 2);
+
+var res = a.add(b);
+console.log(res.<span class="apidocCodeKeywordSpan">toString</span>(10));  // 57047
+```
+
+**Note**: decimals are not supported in this library.
+
+## Notation
+
+### Prefixes
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.toTwos" id="apidoc.element.bn.js.BN.prototype.toTwos">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>toTwos
+        <span class="apidocSignatureSpan">(width)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toTwos(width) {
+  if (this.negative !== 0) {
+    return this.abs().inotn(width).iaddn(1);
+  }
+  return this.clone();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+  depending on the comparison result (`ucmp`, `cmpn`)
+* `a.lt(b)` - `a` less than `b` (`n`)
+* `a.lte(b)` - `a` less than or equals `b` (`n`)
+* `a.gt(b)` - `a` greater than `b` (`n`)
+* `a.gte(b)` - `a` greater than or equals `b` (`n`)
+* `a.eq(b)` - `a` equals `b` (`n`)
+* `a.<span class="apidocCodeKeywordSpan">toTwos</span>(width)` - convert to two's complement representation, where `width`
+is bit width
+* `a.fromTwos(width)` - convert from two's complement representation, where `width` is the bit width
+* `a.isBN(object)` - returns true if the supplied `object` is a BN.js instance
+
+### Arithmetics
+
+* `a.neg()` - negate sign (`i`)
+* `a.abs()` - absolute value (`i`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.uand" id="apidoc.element.bn.js.BN.prototype.uand">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uand
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uand(num) {
+  if (this.length &gt; num.length) return this.clone().iuand(num);
+  return num.clone().iuand(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ucmp" id="apidoc.element.bn.js.BN.prototype.ucmp">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ucmp
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ucmp(num) {
+  // At this point both numbers have the same sign
+  if (this.length &gt; num.length) return 1;
+  if (this.length &lt; num.length) return -1;
+
+  var res = 0;
+  for (var i = this.length - 1; i &gt;= 0; i--) {
+    var a = this.words[i] | 0;
+    var b = num.words[i] | 0;
+
+    if (a === b) continue;
+    if (a &lt; b) {
+      res = -1;
+    } else if (a &gt; b) {
+      res = 1;
+    }
+    break;
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.umod" id="apidoc.element.bn.js.BN.prototype.umod">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>umod
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function umod(num) {
+  return this.divmod(num, 'mod', true).mod;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.uor" id="apidoc.element.bn.js.BN.prototype.uor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uor(num) {
+  if (this.length &gt; num.length) return this.clone().iuor(num);
+  return num.clone().iuor(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ushln" id="apidoc.element.bn.js.BN.prototype.ushln">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ushln
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ushln(bits) {
+  return this.clone().iushln(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.ushrn" id="apidoc.element.bn.js.BN.prototype.ushrn">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>ushrn
+        <span class="apidocSignatureSpan">(bits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ushrn(bits) {
+  return this.clone().iushrn(bits);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.uxor" id="apidoc.element.bn.js.BN.prototype.uxor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>uxor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uxor(num) {
+  if (this.length &gt; num.length) return this.clone().iuxor(num);
+  return num.clone().iuxor(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.xor" id="apidoc.element.bn.js.BN.prototype.xor">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>xor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xor(num) {
+  if (this.length &gt; num.length) return this.clone().ixor(num);
+  return num.clone().ixor(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.divRound(b)` - rounded division
+
+### Bit operations
+
+* `a.or(b)` - or (`i`, `u`, `iu`)
+* `a.and(b)` - and (`i`, `u`, `iu`, `andln`) (NOTE: `andln` is going to be replaced
+  with `andn` in future)
+* `a.<span class="apidocCodeKeywordSpan">xor</span>(b)` - xor (`i`, `u`, `iu`)
+* `a.setn(b)` - set specified bit to `1`
+* `a.shln(b)` - shift left (`i`, `u`, `iu`)
+* `a.shrn(b)` - shift right (`i`, `u`, `iu`)
+* `a.testn(b)` - test if specified bit is set
+* `a.maskn(b)` - clear bits with indexes higher or equal to `b` (`i`)
+* `a.bincn(b)` - add `1 &lt;&lt; b` to the number
+* `a.notn(w)` - not (for the width specified by `w`) (`i`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bn.js.BN.prototype.zeroBits" id="apidoc.element.bn.js.BN.prototype.zeroBits">
+        function <span class="apidocSignatureSpan">bn.js.BN.prototype.</span>zeroBits
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function zeroBits() {
+  if (this.isZero()) return 0;
+
+  var r = 0;
+  for (var i = 0; i &lt; this.length; i++) {
+    var b = this._zeroBits(this.words[i]);
+    r += b;
+    if (b !== 26) break;
+  }
+  return r;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `a.toJSON()` - convert to JSON compatible hex string (alias of `toString(16)`)
+* `a.toArray(endian, length)` - convert to byte `Array`, and optionally zero
+  pad to length, throwing if already exceeding
+* `a.toArrayLike(type, endian, length)` - convert to an instance of `type`,
+  which must behave like an `Array`
+* `a.toBuffer(endian, length)` - convert to Node.js Buffer (if available)
+* `a.bitLength()` - get number of bits occupied
+* `a.<span class="apidocCodeKeywordSpan">zeroBits</span>()` - return number of less-significant consequent zero bits
+  (example: `1010000` has 4 zero bits)
+* `a.byteLength()` - return number of bytes occupied
+* `a.isNeg()` - true if the number is negative
+* `a.isEven()` - no comments
+* `a.isOdd()` - no comments
+* `a.isZero()` - no comments
+* `a.cmp(b)` - compare numbers and return `-1` (a `&lt;` b), `0` (a `==` b), or `1` (a `&gt;` b)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
